@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
   }
 
   async loadBlockchainData() {
-    // const accounts = await web3.eth.getAccounts();  <----- Not working with latest metamask changes
+    // const accounts = await this.web3.eth.getAccounts();  <----- Not working with latest metamask changes
     this.investorAccount = this.accounts[0];
 
     try {
