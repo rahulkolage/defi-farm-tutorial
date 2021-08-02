@@ -63,3 +63,20 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+ (window as any).global = window;
+ (window as any).process = {
+   env: { DEBUG: undefined },
+   nextTick: function() {
+    return null;
+   }
+ };
+
+ declare global {
+  interface Window {
+      ethereum: any;
+      // Web3: any;
+      web3: any;
+  }
+}
+(window as any).global.Buffer = (window as any).global.Buffer || require('buffer').Buffer;

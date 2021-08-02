@@ -44,3 +44,10 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Build
+build
+vendor/*-manifest.json
+node_modules
+.idea
+.vscode/settings.json
