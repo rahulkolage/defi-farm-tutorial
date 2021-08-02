@@ -23,6 +23,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 - `https://dev.to/squademy/install-and-configure-git-on-a-fresh-new-macos-11-big-sur-in-2021-a-complete-guide-6ld`
 
+### This project is based on Blockchain tutorial provided by Dapp University in React.  
+
+Blockchain Tutorial for Beginners | Build a DeFi App (Ethereum, Solidity, Web3.js & Truffle)  
+- `https://www.youtube.com/watch?v=CgXQC4dbGUE`
 
 # Project installation
 
