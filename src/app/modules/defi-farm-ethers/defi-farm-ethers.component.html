@@ -1,0 +1,59 @@
+<div class="row">
+  <main role="main" class="col-lg-12 ml-auto mr-auto" style="max-width: '600px'">
+    <div class="content mr-auto ml-auto">
+
+      <p id="loader" className="text-center" *ngIf="loading">Loading...</p>
+      <div id="content" *ngIf="!loading">
+        <table class="table table-borderless text-muted text-center">
+          <thead>
+            <tr>
+              <th scope="col">Staking Balance</th>
+              <th scope="col">Reward Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <!-- <td>0 mDAI</td>
+              <td>0 DAPP</td> -->
+              <td>{{ethers.utils.formatEther(stakingBalance)}} mDAI</td>
+              <td>{{ethers.utils.formatEther(dappTokenBalance)}} DAPP</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="card mb-4">
+
+          <div class="card-body">
+
+            <form class="mb-3" [formGroup]="form" (ngSubmit)="stakeTokens()">
+              <div>
+                <label class="float-left"><b>Stake Tokens</b></label>
+                <span class="float-right text-muted">
+                  Balance: {{ethers.utils.formatEther(daiTokenBalance)}}
+                </span>
+              </div>
+              <div class="input-group mb-4">
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  placeholder="0"
+                  required
+                  formControlName="tokens"/>
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <img src="../assets/icons/dai.png" height='32' alt=""/><span class="ml-3">mDAI</span>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block btn-lg">STAKE!</button>
+            </form>
+            <button type="submit"
+              class="btn btn-link btn-block btn-sm">
+                UN-STAKE...
+              </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
